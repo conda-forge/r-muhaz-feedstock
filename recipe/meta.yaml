@@ -1,4 +1,4 @@
-{% set version = '1.2.6.1' %}
+{% set version = "1.2.6.2" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/muhaz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/muhaz/muhaz_{{ version }}.tar.gz
-  sha256: 73ce8b6cf23a90613d19075cff6ec7b5b9ba1dbc7d0b4c885f7e40d3ff201023
+  sha256: f2a11f4e1d421aa7f3f525d4aeefed219f6f4eecbd9864836eba5e0217460a81
 
 build:
-  merge_build_host: True  # [win]
-  number: 2
+  merge_build_host: true  # [win]
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -49,7 +49,7 @@ about:
   summary: Produces a smooth estimate of the hazard function for censored data.
   license_family: GPL3
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
 
 extra:
   recipe-maintainers:
