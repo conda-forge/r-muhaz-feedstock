@@ -1,4 +1,4 @@
-{% set version = "1.2.6.4" %}
+{% set version = "1.2.6.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/muhaz_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/muhaz/muhaz_{{ version }}.tar.gz
-  sha256: afa0102c13c108675c3f94a97bc17530bdf24fe3adef7623fbb06592bd42beb5
+  sha256: eac4df7af0346749dd16604e0dc19257fa8b319738bbd0b3abb6de65f0ae2239
 
 build:
-  number: 4
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
